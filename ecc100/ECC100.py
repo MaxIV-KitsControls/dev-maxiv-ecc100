@@ -102,7 +102,7 @@ class ECC100 (PyTango.Device_4Impl):
     def read_PositionAxis0(self, attr):
         self.debug_stream("In read_PositionAxis0()")
         #----- PROTECTED REGION ID(ECC100.PositionAxis0_read) ENABLED START -----#
-        self.attr_PositionAxis0_read = self.ecc100.getPosition(0)
+        self.attr_PositionAxis0_read = self.ecc100.get_position(0)
         attr.set_value(self.attr_PositionAxis0_read)
         #----- PROTECTED REGION END -----#	//	ECC100.PositionAxis0_read
         
@@ -116,7 +116,7 @@ class ECC100 (PyTango.Device_4Impl):
     def read_PositionAxis1(self, attr):
         self.debug_stream("In read_PositionAxis1()")
         #----- PROTECTED REGION ID(ECC100.PositionAxis1_read) ENABLED START -----#
-        self.attr_PositionAxis1_read = self.ecc100.getPosition(1)
+        self.attr_PositionAxis1_read = self.ecc100.get_position(1)
         attr.set_value(self.attr_PositionAxis1_read)
         #----- PROTECTED REGION END -----#	//	ECC100.PositionAxis1_read
         
@@ -130,7 +130,7 @@ class ECC100 (PyTango.Device_4Impl):
     def read_PositionAxis2(self, attr):
         self.debug_stream("In read_PositionAxis2()")
         #----- PROTECTED REGION ID(ECC100.PositionAxis2_read) ENABLED START -----#
-        self.attr_PositionAxis2_read = self.ecc100.getPosition(2)
+        self.attr_PositionAxis2_read = self.ecc100.get_position(2)
         attr.set_value(self.attr_PositionAxis2_read)
         #----- PROTECTED REGION END -----#	//	ECC100.PositionAxis2_read
         
