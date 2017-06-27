@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <pogoDsl:PogoSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pogoDsl="http://www.esrf.fr/tango/pogo/PogoDsl">
   <classes name="ECC100" pogoRevision="9.2">
-    <description description="Device server for the Attocube ECC100 motion controller" title="dev-maxiv-ecc100" sourcePath="/Users/mikegu/Documents/MaxLab/KITS/Code/dev-maxiv-ecc100" language="Python" filestogenerate="XMI   file,Code files,Protected Regions" license="GPL" copyright="" hasMandatoryProperty="true" hasConcreteProperty="true" hasAbstractCommand="false" hasAbstractAttribute="false">
+    <description description="Device server for the Attocube ECC100 motion controller" title="dev-maxiv-ecc100" sourcePath="/Users/mikegu/Documents/MaxLab/KITS/Code/dev-maxiv-ecc100/ecc100" language="Python" filestogenerate="XMI   file,Code files,Protected Regions" license="GPL" copyright="" hasMandatoryProperty="true" hasConcreteProperty="true" hasAbstractCommand="false" hasAbstractAttribute="false">
       <inheritances classname="Device_Impl" sourcePath=""/>
       <identification contact="at maxiv.lu.se - mikel.eguiraun" author="mikel.eguiraun" emailDomain="maxiv.lu.se" classFamily="Motion" siteSpecific="" platform="All Platforms" bus="Ethernet" manufacturer="none" reference=""/>
     </description>
@@ -26,6 +26,15 @@
         <type xsi:type="pogoDsl:ConstStringType"/>
       </argout>
       <status abstract="true" inherited="true" concrete="true"/>
+    </commands>
+    <commands name="ResetPosition" description="" execMethod="reset_position" displayLevel="OPERATOR" polledPeriod="0" isDynamic="false">
+      <argin description="">
+        <type xsi:type="pogoDsl:UIntType"/>
+      </argin>
+      <argout description="">
+        <type xsi:type="pogoDsl:VoidType"/>
+      </argout>
+      <status abstract="false" inherited="false" concrete="true" concreteHere="true"/>
     </commands>
     <attributes name="PositionAxis0" attType="Scalar" rwType="READ_WRITE" displayLevel="OPERATOR" polledPeriod="0" maxX="" maxY="" allocReadMember="true" isDynamic="false">
       <dataType xsi:type="pogoDsl:DoubleType"/>

@@ -179,6 +179,16 @@ class ECC100 (PyTango.Device_4Impl):
     #    ECC100 command methods
     # -------------------------------------------------------------------------
     
+    def ResetPosition(self, argin):
+        """ 
+        :param argin: 
+        :type argin: PyTango.DevULong
+        """
+        self.debug_stream("In ResetPosition()")
+        #----- PROTECTED REGION ID(ECC100.ResetPosition) ENABLED START -----#
+        self.ecc100.reset_position(argin)
+        #----- PROTECTED REGION END -----#	//	ECC100.ResetPosition
+        
 
     #----- PROTECTED REGION ID(ECC100.programmer_methods) ENABLED START -----#
     
@@ -207,6 +217,9 @@ class ECC100Class(PyTango.DeviceClass):
 
     #    Command definitions
     cmd_list = {
+        'ResetPosition':
+            [[PyTango.DevULong, "none"],
+            [PyTango.DevVoid, "none"]],
         }
 
 
