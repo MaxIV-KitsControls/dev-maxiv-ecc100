@@ -110,7 +110,7 @@ class ECC100 (PyTango.Device_4Impl):
         self.debug_stream("In write_PositionAxis0()")
         data = attr.get_write_value()
         #----- PROTECTED REGION ID(ECC100.PositionAxis0_write) ENABLED START -----#
-        self.ecc100.setPosition(0, data)
+        self.ecc100.set_position(0, data)
         #----- PROTECTED REGION END -----#	//	ECC100.PositionAxis0_write
         
     def read_PositionAxis1(self, attr):
@@ -124,7 +124,7 @@ class ECC100 (PyTango.Device_4Impl):
         self.debug_stream("In write_PositionAxis1()")
         data = attr.get_write_value()
         #----- PROTECTED REGION ID(ECC100.PositionAxis1_write) ENABLED START -----#
-        self.ecc100.setPosition(1, data)
+        self.ecc100.set_position(1, data)
         #----- PROTECTED REGION END -----#	//	ECC100.PositionAxis1_write
         
     def read_PositionAxis2(self, attr):
@@ -138,7 +138,7 @@ class ECC100 (PyTango.Device_4Impl):
         self.debug_stream("In write_PositionAxis2()")
         data = attr.get_write_value()
         #----- PROTECTED REGION ID(ECC100.PositionAxis2_write) ENABLED START -----#
-        self.ecc100.setPosition(2, data)
+        self.ecc100.set_position(2, data)
         #----- PROTECTED REGION END -----#	//	ECC100.PositionAxis2_write
         
     def read_Axis0Connected(self, attr):
