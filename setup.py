@@ -10,7 +10,6 @@ setup(name = "tangods-ecc100",
       license = "GPLv3",
       url = "http://www.maxiv.lu.se",
       packages = ['ecc100'],
-      package_dir = {'':'ecc100'},
       scripts = ['scripts/ECC100']
      )
 
