@@ -102,61 +102,43 @@ class ECC100 (PyTango.Device_4Impl):
     def read_PositionAxis0(self, attr):
         self.debug_stream("In read_PositionAxis0()")
         #----- PROTECTED REGION ID(ECC100.PositionAxis0_read) ENABLED START -----#
-        try:
-            self.attr_PositionAxis0_read = self.ecc100.getPosition(0)
-            attr.set_value(self.attr_PositionAxis0_read)
-        except:
-            self.ecc100.restart()
+        self.attr_PositionAxis0_read = self.ecc100.getPosition(0)
+        attr.set_value(self.attr_PositionAxis0_read)
         #----- PROTECTED REGION END -----#	//	ECC100.PositionAxis0_read
         
     def write_PositionAxis0(self, attr):
         self.debug_stream("In write_PositionAxis0()")
         data = attr.get_write_value()
         #----- PROTECTED REGION ID(ECC100.PositionAxis0_write) ENABLED START -----#
-        try:
-            self.ecc100.setPosition(0, data)
-        except:
-            self.ecc100.restart()
+        self.ecc100.setPosition(0, data)
         #----- PROTECTED REGION END -----#	//	ECC100.PositionAxis0_write
         
     def read_PositionAxis1(self, attr):
         self.debug_stream("In read_PositionAxis1()")
         #----- PROTECTED REGION ID(ECC100.PositionAxis1_read) ENABLED START -----#
-        try:
-            self.attr_PositionAxis1_read = self.ecc100.getPosition(1)
-            attr.set_value(self.attr_PositionAxis1_read)
-        except:
-            self.ecc100.restart()
+        self.attr_PositionAxis1_read = self.ecc100.getPosition(1)
+        attr.set_value(self.attr_PositionAxis1_read)
         #----- PROTECTED REGION END -----#	//	ECC100.PositionAxis1_read
         
     def write_PositionAxis1(self, attr):
         self.debug_stream("In write_PositionAxis1()")
         data = attr.get_write_value()
         #----- PROTECTED REGION ID(ECC100.PositionAxis1_write) ENABLED START -----#
-        try:
-            self.ecc100.setPosition(1, data)
-        except:
-            self.ecc100.restart()
+        self.ecc100.setPosition(1, data)
         #----- PROTECTED REGION END -----#	//	ECC100.PositionAxis1_write
         
     def read_PositionAxis2(self, attr):
         self.debug_stream("In read_PositionAxis2()")
         #----- PROTECTED REGION ID(ECC100.PositionAxis2_read) ENABLED START -----#
-        try:
-            self.attr_PositionAxis2_read = self.ecc100.getPosition(2)
-            attr.set_value(self.attr_PositionAxis2_read)
-        except:
-            self.ecc100.restart()
+        self.attr_PositionAxis2_read = self.ecc100.getPosition(2)
+        attr.set_value(self.attr_PositionAxis2_read)
         #----- PROTECTED REGION END -----#	//	ECC100.PositionAxis2_read
         
     def write_PositionAxis2(self, attr):
         self.debug_stream("In write_PositionAxis2()")
         data = attr.get_write_value()
         #----- PROTECTED REGION ID(ECC100.PositionAxis2_write) ENABLED START -----#
-        try:
-            self.ecc100.setPosition(2, data)
-        except:
-            self.ecc100.restart()
+        self.ecc100.setPosition(2, data)
         #----- PROTECTED REGION END -----#	//	ECC100.PositionAxis2_write
         
     def read_Axis0Connected(self, attr):
@@ -172,21 +154,15 @@ class ECC100 (PyTango.Device_4Impl):
     def read_Axis1Connected(self, attr):
         self.debug_stream("In read_Axis1Connected()")
         #----- PROTECTED REGION ID(ECC100.Axis1Connected_read) ENABLED START -----#
-        try:
-            self.attr_Axis1Connected_read = self.ecc100.axis_connected(1)
-            attr.set_value(self.attr_Axis1Connected_read)
-        except:
-            self.ecc100.restart()
+        self.attr_Axis1Connected_read = self.ecc100.axis_connected(1)
+        attr.set_value(self.attr_Axis1Connected_read)
         #----- PROTECTED REGION END -----#	//	ECC100.Axis1Connected_read
         
     def read_Axis2Connected(self, attr):
         self.debug_stream("In read_Axis2Connected()")
         #----- PROTECTED REGION ID(ECC100.Axis2Connected_read) ENABLED START -----#
-        try:
-            self.attr_Axis2Connected_read = self.ecc100.axis_connected(2)
-            attr.set_value(self.attr_Axis2Connected_read)
-        except:
-            self.ecc100.restart()
+        self.attr_Axis2Connected_read = self.ecc100.axis_connected(2)
+        attr.set_value(self.attr_Axis2Connected_read)
         #----- PROTECTED REGION END -----#	//	ECC100.Axis2Connected_read
         
     
