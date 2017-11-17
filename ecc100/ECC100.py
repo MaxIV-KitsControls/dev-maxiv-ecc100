@@ -102,7 +102,7 @@ class ECC100 (PyTango.Device_4Impl):
     def read_PositionAxis0(self, attr):
         self.debug_stream("In read_PositionAxis0()")
         #----- PROTECTED REGION ID(ECC100.PositionAxis0_read) ENABLED START -----#
-        self.attr_PositionAxis0_read = self.ecc100.get_position(0)
+        self.attr_PositionAxis0_read = self.ecc100.get_position(0) / 1e6
         attr.set_value(self.attr_PositionAxis0_read)
         #----- PROTECTED REGION END -----#	//	ECC100.PositionAxis0_read
         
@@ -110,13 +110,13 @@ class ECC100 (PyTango.Device_4Impl):
         self.debug_stream("In write_PositionAxis0()")
         data = attr.get_write_value()
         #----- PROTECTED REGION ID(ECC100.PositionAxis0_write) ENABLED START -----#
-        self.ecc100.set_position(0, data)
+        self.ecc100.set_position(0, int(data * 1e6))
         #----- PROTECTED REGION END -----#	//	ECC100.PositionAxis0_write
         
     def read_PositionAxis1(self, attr):
         self.debug_stream("In read_PositionAxis1()")
         #----- PROTECTED REGION ID(ECC100.PositionAxis1_read) ENABLED START -----#
-        self.attr_PositionAxis1_read = self.ecc100.get_position(1)
+        self.attr_PositionAxis1_read = self.ecc100.get_position(1) / 1e6
         attr.set_value(self.attr_PositionAxis1_read)
         #----- PROTECTED REGION END -----#	//	ECC100.PositionAxis1_read
         
@@ -124,13 +124,13 @@ class ECC100 (PyTango.Device_4Impl):
         self.debug_stream("In write_PositionAxis1()")
         data = attr.get_write_value()
         #----- PROTECTED REGION ID(ECC100.PositionAxis1_write) ENABLED START -----#
-        self.ecc100.set_position(1, data)
+        self.ecc100.set_position(1, int(data * 1e6))
         #----- PROTECTED REGION END -----#	//	ECC100.PositionAxis1_write
         
     def read_PositionAxis2(self, attr):
         self.debug_stream("In read_PositionAxis2()")
         #----- PROTECTED REGION ID(ECC100.PositionAxis2_read) ENABLED START -----#
-        self.attr_PositionAxis2_read = self.ecc100.get_position(2)
+        self.attr_PositionAxis2_read = self.ecc100.get_position(2) / 1e6
         attr.set_value(self.attr_PositionAxis2_read)
         #----- PROTECTED REGION END -----#	//	ECC100.PositionAxis2_read
         
@@ -138,7 +138,7 @@ class ECC100 (PyTango.Device_4Impl):
         self.debug_stream("In write_PositionAxis2()")
         data = attr.get_write_value()
         #----- PROTECTED REGION ID(ECC100.PositionAxis2_write) ENABLED START -----#
-        self.ecc100.set_position(2, data)
+        self.ecc100.set_position(2, int(data * 1e6))
         #----- PROTECTED REGION END -----#	//	ECC100.PositionAxis2_write
         
     def read_Axis0Connected(self, attr):
