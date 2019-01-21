@@ -280,7 +280,7 @@ class ECC100 (PyTango.Device_4Impl):
         """
         self.debug_stream("In TimedContinousForward()")
         #----- PROTECTED REGION ID(ECC100.TimedContinousForward) ENABLED START -----#
-        self.ecc100.timed_continous_fordward(argin, self.attr_MovementDelay_read)
+        self.ecc100.timed_continous_forward(argin, self.attr_MovementDelay_read)
         #----- PROTECTED REGION END -----#	//	ECC100.TimedContinousForward
         
     def TimedContinousBackward(self, argin):
@@ -368,7 +368,7 @@ class ECC100Class(PyTango.DeviceClass):
             [[PyTango.DevLong, "axis"],
             [PyTango.DevVoid, "none"]],
         'TimedContinousBackward':
-            [[PyTango.DevLong, "axis,delay"],
+            [[PyTango.DevLong, "axis"],
             [PyTango.DevVoid, "none"]],
         'EnableMovement':
             [[PyTango.DevLong, "axis"],
