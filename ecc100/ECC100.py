@@ -92,8 +92,11 @@ class ECC100 (PyTango.Device_4Impl):
         self.attr_Axis1ReferencePositionValid_read = False
         self.attr_Axis2ReferencePositionValid_read = False
         #----- PROTECTED REGION ID(ECC100.init_device) ENABLED START -----#
-        self.ecc100 = libecc100.libECC100.ECC100(self.Host)
-        self.set_state(PyTango.DevState.ON)
+        try:
+            self.ecc100 = libecc100.libECC100.ECC100(self.Host)
+            self.set_state(PyTango.DevState.ON)
+        except:
+            self.set_state(PyTango.DevState.FAULT)
         #----- PROTECTED REGION END -----#	//	ECC100.init_device
 
     def always_executed_hook(self):
